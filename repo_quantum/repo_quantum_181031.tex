@@ -1,6 +1,5 @@
 \documentclass[10pt]{ujarticle}
-\usepackage[top=30truemm, bottom=30truemm, left=25truemm, right=25truemm]{geome\
-try}
+\usepackage[top=30truemm, bottom=30truemm, left=25truemm, right=25truemm]{geometry}
 \usepackage{listings}
 \usepackage{ascmac}
 \usepackage{amssymb}
@@ -22,34 +21,34 @@ try}
 \right.
 \]
 のとき、以下の式が成り立つことを示す。
-\[
+\begin{eqnarray*}
 \sum{n} (\ket{\phi_n} \bra{\phi_n} +\ket{\psi_n} \bra{\psi_n}) + \ket{-, 0} \bra{-, 0} = 1
-\]
+\end{eqnarray*}
 
 \section{解}
 シグマの和の中身を計算すると、
-\[
+\begin{eqnarray*}
 \ket{\phi_n} \bra{\phi_n} +\ket{\psi_n} \bra{\psi_n} \\
 = (\cos\theta \ket{-, n+1} - \sin\theta \ket{{+,n})(\cos\theta \bra{-, n+1} - \sin\theta \bra{{+,n}) + (\sin\theta \ket{-, n+1} + \cos\theta \ket{{+,n})(\sin\theta \bra{-, n+1} + \cos\theta \bra{{+,n}) \\
 = (\cos^2\theta + \sin^2\theta) \ket{-, n+1} \bra{-, n+1} + (\cos\theta\sin\theta-\cos\theta\sin\theta)(\ket{-, n+1}\bra{+, n} + \ket{+, n} \bra{-, n+1}) \\
 = \ket{-, n+1} \bra{-, n+1} + \ket{+, n} \brbra{{+, n}
-\]
+\end{eqnarray*}
 これの和をとると、
-\[
+\begin{eqnarray*}
 \sum_{n} (\ket{-, n+1} \bra{-, n+1} + \ket{+, n} \brbra{{+, n}) = \sum_{n} \ket{-, n+1} \bra{-, n+1} + \sum_{n} \ket{+, n} \bra{+, n}
-\]
+\end{eqnarray*}
 第2項はbraketの中身がn=0からの和になっているが、第1項ではbraketの中身がn=1からの和になっている。揃えるために$\ket{-, 0} \bra{-, 0}$を加えると、
-\[
+\begin{eqnarray*}
 \sum{n} (\ket{\phi_n} \bra{\phi_n} +\ket{\psi_n} \bra{\psi_n}) + \ket{-, 0} \bra{-, 0} 
-\]
+\end{eqnarray*}
 ここで、
-\[
+\begin{eqnarray*}
 \sum_{n} \ket{-} \bra{-} + \ket{+} \bra{+} = 1
-\]
+\end{eqnarray*}
 なので、
-\[
+\begin{eqnarray*}
 \sum{n} (\ket{\phi_n} \bra{\phi_n} +\ket{\psi_n} \bra{\psi_n}) + \ket{-, 0} \bra{-, 0} = 1
-\]
+\end{eqnarray*}
 となる。
 
 \end{document}
