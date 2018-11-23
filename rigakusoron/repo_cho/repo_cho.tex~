@@ -39,4 +39,30 @@ M_{pl} &=& \sqrt{\frac{1}{G_N}} \\
 &\simeq& 4.85×10^{-41}\mathrm{[GeV]}
 \end{eqnarray*}
 
+
+\section{}
+\subsection{問い}
+ボルツマン定数$k_B \approx 1.38 \times 10^{-23} \mathrm{[m^2 kg s^{-2} K^{-2}]}$の温度$T$の積を$\mathrm{eV}$で表し，$T=1K$のときのエネルギーを求めなさい．
+
+\subsection{解}
+ボルツマン定数に$1\mathrm{[K]}$をかけると，
+\begin{eqnarray*}
+1.38 \times 10^{-23} \mathrm{[m^2 kg s^{-2} K^{-1}]} &=& 1.38 \times 10^{-23} \times 6.2415 \times 10^9 \mathrm{[GeV]}\\
+&=& 8.61327 \times 10^{-14} \mathrm{[GeV]} \\
+&=& 8.61327 \times 10^{-5} \mathrm{[eV]}\\
+&\simeq& 8.61 \times 10^{-5} \mathrm{[eV]}
+\end{eqnarray*}
+
+
+\section{}
+\subsection{問い}
+太陽の表面温度を調べ，それをエネルギーの単位で表しなさい．
+
+\subsection{解}
+太陽の表面温度は，$5778\mathrm{[K]}$．$E = k_B T$だから，2で得られた値より，
+\begin{eqnarray*}
+8.61 \times 10^{-5} \times 5778 \mathrm{[eV]} &=& 0.4974 \mathrm{[eV]} \\
+&\simeq& 0.497 \mathrm{[eV]}
+\end{eqnarray*}
+
 \end{document}
