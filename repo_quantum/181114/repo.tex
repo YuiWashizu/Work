@@ -19,13 +19,34 @@
 \section{問い}
 行列表示にて，以下のように$\rho$が表される時，
 \[
-\rho = \left(
+\rho_s(t) = \left(
 \begin{array}{cc}
 |\alpha|^2 & \alpha \beta^{\ast} e^{-i\omega_0 t} C(t) \\
 \alpha^{\ast} \beta e^{i\omega_0 t} C(t) & |\beta|^2
 \end{array}
 \right)
 \]
-エントロピー$S(t) = -k_B \mathrm{Tr} \rho_s (t) \ln \rho_s(t)$を用いて緩和過程の評価方法を検討せよ．
+スピンの期待値は
+\begin{eqnarray*}
+\langle S_\pm \rangle_t &=& \langle S_x \rangle_t \pm i \langle S_y \rangle_t \\
+\langle S_z \rangle_t &=& \mathrm{Tr}_S S_z \rho_x(t)\\
+&=& \frac{1}{2} (|\alpha|^2 - |\beta|^2)
+\end{eqnarray*}
+と書け，このとき一般に
+\[
+\rho_s(t) = \left(
+\begin{array}{cc}
+\frac{1}{2} + \langle S_z \rangle_t & \langle S_- \rangle_t \\
+\langle S_+ \rangle & \frac{1}{2} - \langle S_z \rangle_t
+\end{array}
+\right)
+\]
+と表せる．\\
+このとき，エントロピー$S(t) = -k_B \mathrm{Tr} \rho_s (t) \ln \rho_s(t)$を用いて緩和過程の評価方法を検討せよ．
+
+\section{解}
+$\rho_s(t)$の式をエントロピー$S(t)$に代入すると，
+
+
 
 \end{document}
