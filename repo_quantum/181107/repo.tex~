@@ -1,0 +1,22 @@
+\documentclass[10pt]{ujarticle}
+\usepackage[top=30truemm, bottom=30truemm, left=25truemm, right=25truemm]{geometry}
+\usepackage{listings}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{braket}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage[dvipdfmx]{graphicx,color}
+
+\title{量子物理学概論レポート}
+\author{g1840624 鷲津 優維}
+\date{2018/11/07}
+
+\begin{document}
+\maketitle
+\section{問い}
+
+
+\end{document}
