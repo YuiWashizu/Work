@@ -1,0 +1,32 @@
+\documentclass[10pt]{ujarticle}
+\usepackage[top=30truemm, bottom=30truemm, left=25truemm, right=25truemm]{geometry}
+\usepackage{listings}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{braket}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage[dvipdfmx]{graphicx,color}
+
+\title{理学総論レポート}
+\autor{g1840624 鷲津 優維}
+\date{2018/10/29}
+
+\begin{document}
+\maketitle
+\section{問い 1}
+万有引力定数$G_N = 6.67×10^{-11}\m^3 \kg^{-1} \s{^-2}$を自然単位系で
+\[
+G_N = \prac{1}{M^2_{pl}}
+\]
+の形で表したとき，$M_{pl}$(GeV単位)を求めなさい．$M_{pl}$はプランク質量(もしくはプランクスケール)と呼ばれる．プランク質量を長さ(メートル)および時間(秒)に換算してみよ.
+
+\section{解 1}
+まず，$G_N$の単位を$\mathrm{GeV}$に変換する．
+\[
+1 \mathrm{m^3 kg^{-1} s^{-2}}  = 0.594 ×　10^{-35} \mathrm{GeV} 
+\]
+
+\end{document}
