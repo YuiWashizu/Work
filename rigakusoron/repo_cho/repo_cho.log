@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.0-u1.23-180226-2.6 (utf8.uptex) (TeX Live 2018) (preloaded format=uplatex 2018.5.9)  23 NOV 2018 15:42
+This is e-upTeX, Version 3.14159265-p3.8.0-u1.23-180226-2.6 (utf8.uptex) (TeX Live 2018) (preloaded format=uplatex 2018.7.2)  29 NOV 2018 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,17 +471,17 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 21.
  [1
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
+] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
 
-(./repo_cho.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 76.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+ (./repo_cho.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 104.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
 Package rerunfilecheck Info: File `repo_cho.out' has not changed.
 (rerunfilecheck)             Checksum: 83DF32CD35675EBE65E0ADFA9D3F3BDF;571.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
  ) 
 Here is how much of TeX's memory you used:
  7608 strings out of 493270
@@ -490,6 +490,6 @@ Here is how much of TeX's memory you used:
  11459 multiletter control sequences out of 15000+600000
  20724 words of font info for 90 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,8n,32p,454b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,8n,32p,454b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on repo_cho.dvi (2 pages, 6676 bytes).
+Output written on repo_cho.dvi (3 pages, 8196 bytes).
