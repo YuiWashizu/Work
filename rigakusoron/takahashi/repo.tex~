@@ -119,7 +119,7 @@ $\phi_L$と$\phi_S$はそれぞれ右巻き，左巻きのスピンを表して�
 \begin{eqnarray}
 E
 \left[
-\begin{array}{c}
+\begin{array}{c}[
   \phi_L \\
   \phi_S 
 \end{array}
@@ -133,7 +133,7 @@ m_e c^2
 \end{array}
 \right]
 \left[
-\begin{array}{c}
+\begin{array}{c}[
   \phi_L \\
   \phi_S 
 \end{array}
@@ -146,7 +146,7 @@ m_e c^2
 \end{array}
 \right]
 \left[
-\begin{array}{c}
+\begin{array}{c}[
   \phi_L \\
   \phi_S 
 \end{array}
