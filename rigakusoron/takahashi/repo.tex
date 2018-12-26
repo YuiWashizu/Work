@@ -12,13 +12,13 @@
 
 \title{理学総論レポート}
 \author{g1840624 鷲津 優維}
-\date{2018/11/05}
+\date{2018/11/26}
 
 \begin{document}
 \maketitle
 \section{}
 \subsection{問い}
-スピン-軌道相互作用をDirac方程式から導出
+スピン-軌道相互作用をDirac方程式から導出する．
 
 \subsection{解}
 Diracが提案した式（Dirac方程式）は以下のよう
@@ -234,7 +234,7 @@ E
 \label{eq4}
   \int \phi_L^* \phi_L dv + \int \phi_S^* \phi_S dv &=& \int \phi_L^* \phi_L dv + \int \left( \frac{\bm{\hat{p}}^2}{2m_e} \phi_L \right) ^*\frac{\bm{\hat{p}}^2}{2m_e} \phi_L dv \nonumber \\
   &=& \int \phi_L^* \left[ 1+ \frac{\bm{\hat{p}}^2}{4m_e^2 c^2} \right] \phi_L dv \nonumber \\
-  &=& \int \phi_L^* \left[ 1+ \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \left[ 1+ \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \phi_L dv \\
+  &=& \int \phi_L^* \left[ 1+ \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \left[ 1+ \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \phi_L dv \nonumber \\
   &=& 1
 \end{eqnarray}
 
@@ -247,7 +247,7 @@ E
 
 (\ref{eq5})を，(\ref{eq6})を考慮して$\phi_T$の方程式に書き換えると，
 \begin{eqnarray}
-\left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \left[(c \bm{\sigma} \cdot \bm{\hat{p}} \frac{1}{E-V+2m_e c^2} (c\bm{\sigma} \cdot \bm{\hat{p}})+V \right] \left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \phi_T = E \left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] ^2 \phi_T
+\left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \left[(c \bm{\sigma} \cdot \bm{\hat{p}} ) \frac{1}{E-V+2m_e c^2} (c\bm{\sigma} \cdot \bm{\hat{p}})+V \right] \left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \phi_T = E \left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] ^2 \phi_T
 \end{eqnarray}
 
 $E-V<<2m_e c^2$を考慮すると，
@@ -261,7 +261,7 @@ $E-V<<2m_e c^2$を考慮すると，
 となるので，
 
 \begin{eqnarray}
-\left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \left[(\bm{\sigma} \cdot \bm{\hat{p}} \frac{1}{2m_e} \right] \left[ 1- \frac{E-V}{2m_e c^2} (\bm{\sigma} \cdot \bm{\hat{p}})+V \right] \left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \phi_T = E \left[ 1+ \frac{\bm{\hat{p}}^2}{4m_e^2 c^2} \right] ^2 \phi_T
+\left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \left[(\bm{\sigma} \cdot \bm{\hat{p}} ) \frac{1}{2m_e} \left[ 1- \frac{E-V}{2m_e c^2} \right] (\bm{\sigma} \cdot \bm{\hat{p}})+V \right] \left[ 1- \frac{\bm{\hat{p}}^2}{8m_e^2 c^2} \right] \phi_T = E \left[ 1+ \frac{\bm{\hat{p}}^2}{4m_e^2 c^2} \right] ^2 \phi_T
 \end{eqnarray}
 
 これより，
@@ -272,14 +272,13 @@ $E-V<<2m_e c^2$を考慮すると，
 
 原子を仮定すると，$V=\frac{Ze^2}{4\pi \epsilon_0 r}$なので，(\ref{eq7})の第４項がスピン軌道相互作用項となる．
 \begin{eqnarray}
-  \hat{H}_{spin-orbit} &=& -\frac{1}{4m_e^2 c^2} i\sigma \left[\bm{\hat{p}} V\right] \times \bm{\hat{p}} = \frac{1}{4m_e^2 c^2} i\sigma \left[\bm{\hat{p}} \frac{e^2}{4\pi \epsilon_0 r}\right] \times \bm{\hat{p}} = \frac{1}{4m_e^2 c^2} i\sigma \left[ \frac{\hbar}{i} \nabla \cdot \frac{e^2}{4r\pi \epsilon_0} \right] \times \bm{\hat{p}} \\
-  &=& \frac{1}{4 m_e^2 c^2}\hbar \bm{\sigma} \frac{e^2}{4\pi \epsilon_0} \left[ \nabla \cdot \frac{1}{r} \right] \times \bm{\hat{p}} = \frac{1}{4m_e^2 c^2} \frac{e^2}{4\pi \epsilon_0} \hbar \bm{\sigma} \left[ \frac{\bm{r}}{r^3} \right] \times \bm{\hat{p}} \\f
+  \hat{H}_{\rm{spin-orbit}} &=& -\frac{1}{4m_e^2 c^2} i\sigma \left[\bm{\hat{p}} V\right] \times \bm{\hat{p}} = \frac{1}{4m_e^2 c^2} i\sigma \left[\bm{\hat{p}} \frac{e^2}{4\pi \epsilon_0 r}\right] \times \bm{\hat{p}} = \frac{1}{4m_e^2 c^2} i\sigma \left[ \frac{\hbar}{i} \nabla \cdot \frac{e^2}{4r\pi \epsilon_0} \right] \times \bm{\hat{p}} \\
+  &=& \frac{1}{4 m_e^2 c^2}\hbar \bm{\sigma} \frac{e^2}{4\pi \epsilon_0} \left[ \nabla \cdot \frac{1}{r} \right] \times \bm{\hat{p}} = \frac{1}{4m_e^2 c^2} \frac{e^2}{4\pi \epsilon_0} \hbar \bm{\sigma} \left[ \frac{\bm{r}}{r^3} \right] \times \bm{\hat{p}} \\
   &=& \frac{1}{2m_e^2 c^2} \frac{Ze^2}{4\pi \epsilon_0} \left[ \frac{1}{2} \bm{\sigma} \hbar \right] \frac{1}{r^3} \bm{\hat{L}}
 \end{eqnarray}
 
 ここで，$\bm{\hat{L}}$はスピン角運動量を表す．\\
-以上で，スピン軌道相互作用を導出できた．
-
+以上で，Dirac方程式からスピン軌道相互作用を導出することができた．
 
 
 
