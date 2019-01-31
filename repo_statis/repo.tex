@@ -1,0 +1,276 @@
+\documentclass[10pt]{ujarticle}
+\usepackage[top=30truemm, bottom=30truemm, left=25truemm, right=25truemm]{geometry}
+\usepackage{listings}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{braket}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage[dvipdfmx]{graphicx,color}
+
+\title{統計力学特論レポート}
+\author{g1840624 鷲津 優維}
+\date{2019/01/31}
+
+\begin{document}
+\maketitle
+%toi1
+\section{}
+\subsection{問い}
+密度行列$\rho$が純粋状態を表すためには、等号$\rho^2 = \rho$が成り立つことが必要かつ十分であることを示せ。
+
+\subsection{解}
+\subsubsection{純粋状態（$\rho = \ket{\phi}\bra{\phi}$）$\to \rho^2 = \rho$が成立することを示す}
+\begin{eqnarray*}
+  \rho^2 &=& \ket{\phi} \braket{\phi|\phi} \bra{\phi}\\
+  &=& \ket{\phi} \bra{\phi}\\
+  &=& \rho
+\end{eqnarray*}
+なので、成立。
+
+\subsubsection{純粋状態$\gets \rho^2 = \rho$が成立することを示す}
+混合状態の密度行列は$\rho = \sum_j \Pi_j \ket{\phi} \bra{\phi}$なので、
+\begin{eqnarray*}
+  \rho^2 &=& \left( \sum_j \Pi_j \ket{\phi_j} \bra{\phi_j} \right)^2 \\
+  &=& \left( \sum_j \Pi_j \ket{\phi_j} \bra{\phi_j} \right) \times \left( \sum_k \Pi_k \ket{\phi_k} \bra{\phi_k} \right) \\
+  &=& \sum_j \sum_k \delta_{jk} \Pi_j \Pi_k \ket{\phi_j}\braket{\phi_j|\phi_k}\bra{\phi_k}\\
+  &=& \sum_j \Pi_j^2 \ket{\phi_j} \bra{\phi_j}\\
+  &=& \ket{\phi} \bra{\phi}\\
+  &=& \rho
+\end{eqnarray*}
+
+\section{}
+\subsection{問い}
+規格化された2つの線形独立なベクトル$\ket{a}$、$\bra{b}$と実パラメータ$\lambda$を用いて、演算子$\rho=(1-\lambda)\ket{a}\bra{a}+\lambda\ket{b}\bra{b}$を定義する。ただし、$\braket{a|b}\neq0$と仮定。このとき、演算子$\rho$が量子状態を表すためにパラメータ$\lambda$が満たすべき条件と演算子$\rho$が純粋状態を表すための条件を求めよ。
+
+\subsection{解}
+演算子$\rho$が量子状態を表すとき、任意の状態ベクトル$\ket{\phi}$に対して、$\langle \rho \rangle \geq 0$
+\begin{eqnarray*}
+  \bra{\phi} \rho \ket{\phi} &=& (1-\lambda) \braket{\phi|a}\braket{a|\phi}+\lambda\braket{\phi|b}\braket{b|\phi}\\
+  &=& (1-\lambda)|\braket{\phi|a}|^2 + \lambda|\braket{\phi|b}|^2
+\end{eqnarray*}1
+$|\braket{\phi|a}|^2\geq0$、$|\braket{\phi|b}|^2\geq0$なので以上より、
+\[
+\begin{cases}
+  1-\lambda \geq 0\\
+  \lambda \geq 0
+\end{cases}
+\]
+すなわち、$0\leq\lambda\leq1$が必要条件。\\
+また、純粋条件を表すための条件は$\rho^2=\rho$なので、
+\begin{eqnarray*}
+  \rho^2 &=& (1-\lambda)^2 \ket{a}\braket{a|a}\bra{a}+(1-\lambda)\lambda\ket{a}\braket{a|b}\bra{a}\\
+  &&+(1-\lambda)\lambda\ket{b}\braket{b|a}\bra{a}+\lambda^2 \ket{b}\braket{b|b}\bra{b}\\
+  &=&(1-\lambda)^2\ket{a}\bra{a}+(1-\lambda)\lambda\left(\ket{a}\braket{a|b}\bra{b}+\ket{b}\braket{b|a}\bra{a}\right)\lambda^2\ket{b}\bra{b}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+  \rho = (1-\lambda)\ket{a}\bra{a}+\lambda\ket{b}\bra{b}
+\end{eqnarray*}
+
+以上より、
+\[
+\begin{cases}
+  (1-\lambda)^2 = 1- \lambda\\
+  \lambda^2 = \lambda\\
+  (1-\lambda)\lambda = 0
+\end{cases}
+\]
+すなわち、$\lambda = 0, 1$が必要な条件となる。
+%toi2
+\section{}
+\subsection{問い}
+次の式で与えられる$4 \times 4$行列が量子状態を表すための条件を求めよ。
+\[
+\left(
+\begin{array}{cccc}
+  a & 0 & 0 & x \\
+  0 & b & y & 0 \\
+  0 & z & c & 0 \\
+  w & 0 & 0 & d
+\end{array}
+\right) = \rho
+\]
+
+\subsection{解}
+必要な条件は以下の4つ
+\[
+\begin{cases}
+  \rho^\dagger = \rho\\
+  \mathrm{Tr}\left[\rho\right] = 1\\
+  \mathrm{Tr}\left[\rho^2\right] \geq 1\\
+  固有値が正
+\end{cases}
+\]
+\begin{eqnarray*}
+  \rho^2 &=& \left(
+  \begin{array}{cccc}
+    a & 0 & 0 & x \\
+    0 & b & y & 0 \\
+    0 & z & c & 0 \\
+    w & 0 & 0 & d
+  \end{array}
+  \right) \times \left(
+  \begin{array}{cccc}
+    a & 0 & 0 & x \\
+    0 & b & y & 0 \\
+    0 & z & c & 0 \\
+    w & 0 & 0 & d
+  \end{array}
+  \right)\\
+  &=& \left(
+  \begin{array}{cccc}
+    a^2+xw & 0 & 0 & (a+d)x \\
+    0 & b^2+yz & (b+c)y & 0 \\
+    0 & (b+c)z & c^2+yz & 0 \\
+    (a+d)w & 0 & 0 & d^2+xw
+  \end{array}
+  \right)
+\end{eqnarray*}
+なので、$\mathrm{Tr}[\rho^2]$は
+\begin{eqnarray*}
+  \mathrm{Tr}[\rho^2] &=& a^2 + xw + b^2 + yz + yz + c^2 + xw + d^2\\
+  &=& a^2 + b^2 + c^2 + d^2 + 2xw + 2yz \geq 1
+\end{eqnarray*}
+
+
+すなわち、以下のように書き直せる。
+\[
+\begin{cases}
+  全ての成分がエルミート共役\\
+  a+b+c+d=1\\
+  a^2+b^2+c^2+d^2+2xw+2yz \geq 1\\
+  固有値が正
+\end{cases}
+\]
+
+%toi3
+\section{}
+\subsection{問い}
+大きさ1/2のスピンの状態を表す密度行列$\rho(t)$の時間発展が次の量子マスター方程式によって決定される場合を考える。
+\[
+\frac{\partial}{\partial t}\rho(t) = -\frac{i}{2} \omega[\sigma_z, \rho(t)] + \gamma[\sigma_x \rho(t) \sigma_z - \rho(t)]
+\]
+ここで、$\omega$と$\gamma$は正の定数、$\sigma_z$はスピンのz成分を表すパウリ行列である。また、初期時刻は$t=0$とする。初期時刻での密度行列を$\rho(0)$として、この方程式の解$\rho(t)$を求め、スピンがどのような運動をするのか説明せよ。
+
+\subsection{解}
+密度行列は、
+\begin{eqnarray*}
+  \rho(t) &=& \frac{1}{2} (I+ \vec{a}(t) \cdot \vec{\sigma})\\
+  &=& \frac{1}{2} + \frac{1}{2} a_z(t) \cdot \sigma_z + a(t)\sigma_- + a^*(t) \sigma_+
+\end{eqnarray*}
+\[
+\begin{cases}
+  \langle \sigma_+(t) \rangle = \mathrm{Tr}[\sigma_+ \rho(t)] = a(t)\\
+  \langle \sigma_-(t) \rangle = \mathrm{Tr}[\sigma_+ \rho(t)] = a^*(t)
+\end{cases}
+\]
+以上より、$\sigma_+$、$\sigma_-$、$\sigma_z$それぞれの期待値を求めれば、時刻tでの状態がわかる。
+\begin{eqnarray*}
+  \frac{\partial}{\partial t} \langle \sigma_+ \rangle &=& \mathrm{Tr} \left[\sigma_+ \frac{\partial}{\partial t} \rho(t) \right] \\
+  &=& \mathrm{Tr}\left[\sigma_+ \cdot -\frac{i}{2} \omega[\sigma_z, \rho(t)] + \gamma[\sigma_x \rho(t) \sigma_z - \rho(t)]\right]\\
+  &=& - \frac{i}{2} \mathrm{Tr}\left[ \sigma_+ [\sigma_z , \rho(t)] \right] + \gamma \mathrm{Tr}\left[\sigma(\sigma_z \rho \sigma_z - \rho(t))\right]\\
+  &&\\
+  && \mathrm{Tr} \left[ \sigma_+ \left[ \sigma_z, \rho(t) \right] \right]\\
+  && = \mathrm{Tr} \left[ \sigma_+ \sigma_z \rho(t) - \sigma_+ \rho(t) \sigma_z \right]\\
+  && = \mathrm{Tr} \left[ \sigma_+ 2\sigma_+ \sigma_- \rho(t) - \sigma_+\rho(t) -\sigma_+\rho(t)2\sigma_+ \sigma_- + \sigma_+ \rho(t) \right] \\
+  && = -2 \langle \sigma_+(t) \rangle\\
+  &&\\
+  && \mathrm{Tr} \left[ \sigma_+ \left( \sigma_z \rho(t) \sigma_z - \rho(t) \right) \right]\\
+  && = \mathrm{Tr} \left[\sigma_+ \sigma_z \rho(t) \sigma_z - \sigma_+ \rho(t) \right]\\
+  && = -2 \langle \sigma_+(t) \rangle\\
+  &&\\    
+  &=& 2 \cdot \frac{i}{2} \omega \langle \sigma_+(t) \rangle - 2\gamma\langle\sigma_+(t)\rangle\\
+  &=& (i\omega -2 \gamma)\langle \sigma_+(t) \rangle
+\end{eqnarray*}
+同様に、
+\begin{eqnarray*}
+  \frac{\partial}{\partial t} \langle \sigma_- \rangle = (i\omega -2 \gamma)\langle \sigma_-(t) \rangle
+\end{eqnarray*}
+また、
+\begin{eqnarray*}
+  \frac{\partial}{\partial t} \langle \sigma_z \rangle &=& \mathrm{Tr} \left[\sigma_z \frac{\partial}{\partial t}\rho(t)\right]\\
+  &=& \mathrm{Tr} \left[ -\frac{i\omega}{2}(\rho(t) - \sigma_z \rho(t) \sigma_z)+(\rho(t)\sigma_z - \sigma_z\rho(t)\right]\\
+  &=& \frac{i\omega}{2}(\mathrm{Tr}(\rho(t)) - \mathrm{Tr}[\sigma_z \rho(t) \sigma_z])+ \gamma (\mathrm{Tr}[\rho(t)\sigma_z]-\mathrm{Tr}[\sigma_z \rho(t)])\\
+  &=& 0
+\end{eqnarray*}
+
+以上より、それぞれを$t=0$の状態を用いて表すと、
+\begin{eqnarray*}
+  \langle \sigma_+ \rangle &=& e^{(i\omega -2\gamma)t} \langle \sigma_+(0) \rangle = e^{(i\omega -2\gamma)t} \mathrm{Tr} \left[ \sigma_+ \rho(0) \right] = a(t)\\
+  \langle \sigma_- \rangle &=& e^{(i\omega -2\gamma)t} \langle \sigma_-(0) \rangle = e^{(i\omega -2\gamma)t} \mathrm{Tr} \left[ \sigma_- \rho(0) \right] = a^*(t)\\
+  \langle \sigma_z \rangle &=& 0\\
+\end{eqnarray*}
+
+なので、以上より、密度行列$\rho(t)$は以下のように求められる。
+\begin{eqnarray*}
+  \rho(t) &=& \frac{1}{2} + \frac{1}{2} \langle \sigma_z(t) \rangle \cdot \sigma_z + \langle \sigma_+(t) \cdot \rangle \sigma_z + \langle \sigma_-(t) \cdot \rangle \sigma_z\\
+  \rho(t) &=& \frac{1}{2} + \left(e^{(i\omega -2\gamma)t} \mathrm{Tr} \left[ \sigma_+ \rho(0) \right] \right) \cdot \sigma_- + \left(e^{(i\omega -2\gamma)t} \mathrm{Tr} \left[ \sigma_- \rho(0) \right]\right) \cdot \sigma_+
+\end{eqnarray*}
+
+シュレディンガー描像で書くと、
+\[
+\rho(t) = \frac{1}{2} + \left(e^{(i\omega -2\gamma)t} \mathrm{Tr} \left[ \sigma_+ \rho(0) \right] \right) \cdot \sigma_- e^{-i\omega t} + \left(e^{(i\omega -2\gamma)t} \mathrm{Tr} \left[ \sigma_- \rho(0) \right]\right) \cdot \sigma_+ e^{-i\omega t}
+\]
+\section{}
+\subsection{問い}
+ハミルトニアン$H$のシステムが熱平衡状態にある。このシステムに十分に弱い静的な害ば$F$をかけて十分に時間が経過したあとと考える。ただし、外場とシステムの相互作用ハミルトニアンを$H=-FX$とする。$X$はシステムの物理量である。このとき、線形応答理論を用いて、外場$F$が物理量$X$の平均値に及ぼす影響を調べよ。
+
+\subsection{解}
+熱平衡状態にかけた外場は、弱い外場なので、温度は変化せず、ハミルトニアンのみ微小変化するとする。\\
+外場をかける前の密度行列を
+\[
+\rho = \frac{1}{Z} e^{-\beta H} \left(\beta = 1/{k_B T} \right)
+\]
+外場をかけた後の密度行列を
+\[
+\rho' = \frac{1}{Z} e^{-\beta H'} \left(H'=H-FA\right)
+\]
+と書くと、
+\[
+e^{-\beta(H-FX)} = e^{-\beta H} + \int^{\beta}_0 d\lambda e^{-(\beta-\lambda)H} X e^{-\lambda H} F
+\]
+積分の部分が1次の項、2重積分の項、3重積分の項と出てくるが、今回は線形応答理論なので、1次の項まで考えればよい。
+\begin{eqnarray*}
+  Z' &=& \mathrm{Tr} e^{-\beta(H-FX)}\\
+  &=& Z + \beta\mathrm{Tr}(e^{-\beta H}A) F\\
+  &=& Z + \beta Z \langle A \rangle F\\
+\end{eqnarray*}
+
+以上の2式を$\rho'$の式に代入すると、
+\begin{eqnarray*}
+  \rho' &=& \frac{1}{Z(1+\beta\langle A \rangle F)} e^{-\beta H} \left[ 1+ \int^{\beta}_0 d\lambda e^{-(\beta-\lambda)H} X e^{-\lambda H} F \right]\\
+  &\simeq& \rho \left[ 1+ \int^{\beta}_0 d\lambda e^{\lambda H} A e^{\lambda H} F -\beta \langle A \rangle F \right]
+\end{eqnarray*}
+
+以上より、外場$F$が物理量$X$の平均値$\langle X \rangle$に与える影響は差を比較すると、
+\begin{eqnarray*}
+  \Delta \langle X \rangle &=& \langle X \rangle' - \langle X \rangle \\
+  &=& \mathrm{Tr} (X \rho') - \mathrm{Tr} (X \rho)\\
+  &=& \left[ \int^{\beta}_0 d\lambda \mathrm{Tr} \rho e^{\lambda H} A e^{-\lambda H} X - \beta \langle A \rangle \langle X \rangle \right] F
+\end{eqnarray*}
+ここで、
+\begin{eqnarray*}
+  \langle A;B \rangle &=& \frac{1}{\beta} \frac{\int^{\beta}_0 \mathrm{Tr}\left[ e^{-(\beta-\lambda)H} A e^{-\lambda H} B \right] d\lambda}{\mathrm{Tr}e^{-\beta H}}\\
+  &=& \frac{1}{\beta} \int^{\beta}_0 d\lambda \mathrm{Tr}\left[ \rho e^{\lambda H} A e^{-\lambda H} B\right] \\
+  \langle B;A \rangle &=& \frac{1}{\beta Z} \int^{\beta}_0 d\lambda \mathrm{Tr}\left[ \rho e^{-(\beta-\lambda) H} B e^{-\lambda H} A\right]\\
+  &=& \langle A;B \rangle
+\end{eqnarray*}
+なので、
+\begin{eqnarray*}
+  \Delta \langle X \rangle &=& \left[ \int^{\beta}_0 d\lambda \mathrm{Tr} \rho e^{\lambda H} A e^{-\lambda H} X - \beta \langle A \rangle \langle X \rangle \right]F\\
+  &=& \beta \langle \left(A-\langle A \rangle \right); \left(X-\langle X \rangle \right) \rangle F
+\end{eqnarray*}
+以上のようになる。\\
+例えば、磁場$H_{\mathrm{ext}}=-HM$（H：磁場、M：磁気モーメント）とすると、
+\begin{eqnarray*}
+  \Delta \langle M \rangle &=& \chi_{MH} H\\
+  \chi_{MH} &=& \beta \langle \left(H-\langle H \rangle \right); \left(M-\langle M \rangle \right) \rangle
+\end{eqnarray*}
+となり、$\chi_{MH}$は磁化率で、磁気モーメントのカノニカル相関を表すものとなる。
+
+
+
+\end{document}
