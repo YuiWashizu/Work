@@ -1,0 +1,104 @@
+\documentclass[10pt]{ujarticle}
+\usepackage[top=30truemm, bottom=30truemm, left=25truemm, right=25truemm]{geometry}
+\usepackage{listings}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{braket}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage[dvipdfmx]{graphicx,color}
+
+\title{理学総論レポート}
+\author{g1840624 鷲津 優維}
+\date{2018/10/29}
+
+\begin{document}
+\maketitle
+\section{}
+\subsection{問い}
+万有引力定数$G_N = 6.67×10^{-11} \mathrm{m^3 kg^{-1} s^{-2}}$を自然単位系で
+\[
+G_N = \frac{1}{M^2_{pl}}
+\]
+の形で表したとき，$M_{pl}$(GeV単位)を求めなさい．$M_{pl}$はプランク質量(もしくはプランクスケール)と呼ばれる．プランク質量を長さ(メートル)および時間(秒)に換算してみよ.
+
+\subsection{解}
+まず，$G_N$の単位を$\mathrm{GeV}$に変換する．
+\[
+6.67 \times 10^{-11} \mathrm{[m^3 kg^{-1} s^{-2}]} = 6.7065 ×01^{-39} \mathrm{[GeV]} 
+\]
+なので，以下のようになる．
+\begin{eqnarray*}
+M_{pl} &=& \sqrt{\frac{1}{G_N}} \\
+&=& \sqrt{\frac{1}{6.7065 ×10^{39}}}\mathrm{[GeV]} \\
+&=& 1.2210 \times 10^{19} \\
+&\simeq& 1.22 \times 10^{19} \mathrm{[GeV]} \\
+\end{eqnarray*}
+
+また，この$M_{pl}$を長さ(メートル)に換算すると，
+\[
+1 \mathrm{[GeV]} = 5.07 \times 10^{15} \mathrm{[m]}
+\]
+なので，
+\begin{eqnarray*}
+  M_{pl} &=& 1.2210 \times 10^{19} \mathrm {[GeV]}\\
+  &=& 1.2210 \times 10^{19} \times 5.07 \times 10^{15} \mathrm{[m^{-1}]} \\
+  &=& 6.1904 \times 10^{34} \mathrm{[m^{-1}]} \\
+  &\simeq& 6.19 \times 10^{34} \mathrm{[m^{-1}]} \\
+\end{eqnarray*}
+
+また，$M_{pl}$を時間(秒)に換算すると
+\begin{eqnarray*}
+  M_{pl} &=& 1.2210 \times 10^{19} \mathrm{[GeV]} \\
+  &=& 1.2210 \times 10^{19} \times 1.52 \times 10^{24} \mathrm{[s^{-1}]} \\
+  &=& 1.8559 \times 10^{43} \mathrm{[s^{-1}]} \\
+  &\simeq& 1.86 \times 10^{43} \mathrm{[s^{-1}]} \\
+\end{eqnarray*}
+
+
+
+\section{}
+\subsection{問い}
+ボルツマン定数$k_B \approx 1.38 \times 10^{-23} \mathrm{[m^2 kg s^{-2} K^{-2}]}$の温度$T$の積を$\mathrm{eV}$で表し，$T=1K$のときのエネルギーを求めなさい．
+
+\subsection{解}
+ボルツマン定数に$1\mathrm{[K]}$をかけると，
+\begin{eqnarray*}
+1.38 \times 10^{-23} \mathrm{[m^2 kg s^{-2} K^{-1}]} &=& 1.38 \times 10^{-23} \times 6.2415 \times 10^9 \mathrm{[GeV]}\\
+&=& 8.61327 \times 10^{-14} \mathrm{[GeV]} \\
+&=& 8.61327 \times 10^{-5} \mathrm{[eV]}\\
+&\simeq& 8.61 \times 10^{-5} \mathrm{[eV]}
+\end{eqnarray*}
+
+
+\section{}
+\subsection{問い}
+太陽の表面温度を調べ，それをエネルギーの単位で表しなさい．
+
+\subsection{解}
+太陽の表面温度は，$5778\mathrm{[K]}$．$E = k_B T$だから，2で得られた値より，
+\begin{eqnarray*}
+8.61 \times 10^{-5} \times 5778 \mathrm{[eV]} &=& 0.4974 \mathrm{[eV]} \\
+&\simeq& 0.497 \mathrm{[eV]}
+\end{eqnarray*}
+
+\section{}
+\subsection{問い}
+学生実験含め，これまでにやったことのあるX線回折やコンプトン散乱など，標的にビームを照射する実験で，使用したビームのエネルギーと測定対象のスケールの関係を自然単位系の観点から議論しなさい．もし，この類の実験の経験などがなければ，出所を明記した上でどこかで行われいてる実験について議論してもよい．
+
+\subsection{解}
+学生実験で行ったコンプトン散乱実験について述べる．\\
+$662 \mathrm{[keV]}$の$\gamma$線をNaIシンチレータに照射して実験を行った．\\
+測定対象だった電子の静止質量は$9.1093 \times 10^{-31}\mathrm{[kg]}$なので，自然単位系で表すと，
+\begin{eqnarray*}
+  9.1093 \times 10^{-31} \mathrm{[kg]} &=& 9.1093 \times 10^{-31} \times 5.61 \times 10^{26} \mathrm{[GeV]} \\
+  &=& 511.03 \mathrm{[keV]} \\
+  &\simeq& 511 \mathrm{[keV]}
+\end{eqnarray*}
+となるので，照射した$\gamma$線のエネルギーは妥当であると判断される．
+
+
+
+\end{document}
