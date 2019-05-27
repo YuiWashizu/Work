@@ -1,0 +1,89 @@
+\documentclass[10pt]{ujarticle}
+\usepackage[top=30truemm, bottom=30truemm, left=25truemm, right=25truemm]{geometry}
+\usepackage{listings}
+\usepackage{ascmac}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{braket}
+\usepackage[dvipdfmx]{graphicx,color}
+
+\title{S.M.Sze ゼミ}
+\author{}
+\date{2019/05/28}
+
+\begin{document}
+\maketitle
+\section{p-n 接合}
+\subsection{空乏領域}
+ポアソン方程式
+\begin{equation}
+  \frac{d^2 \Psi}{dx^2} = \frac{q}{\epsilon_s} (N_A - N_D)
+\end{equation}
+を解くために、不純物分布$N_A-N_D$について知る必要がある。本節では重要な2つの例、階段接合と傾斜接合について考える。\\
+\begin{itemize}
+  \item 階段接合：浅い拡散、または低エネルギーのイオン注入の時に、不純物分布の傾斜が急になるため、階段状分布で近似できる。
+  \item 傾斜接合：深い拡散、または低エネルギーのイオン注入の時に、不純物分布の勾配がなだらかになるため、線形傾斜で近似できる。
+\end{itemize}
+
+\subsubsection{階段接合}
+空乏領域内では、キャリアが空になっているため、ポワソン方程式は次のように簡単に表せる。
+\begin{equation}
+  \frac{d^2 \Psi}{dx^2} =
+  \begin{cases}
+    \frac{qN_A}{\epsilon_s} & -x_p \leq x \leq 0 \\
+    \frac{qN_D}{\epsilon_s} & 0 \leq x \leq x_n
+  \end{cases}
+\end{equation}
+半導体全体で空間電荷は中性であるから、q側の単位面積あたりの負の空間電荷はn側の性の空間電荷と等しくなければならない。（そのため、線形傾斜接合はn側もp側も空乏層の幅が等しくなければならない。）したがって、
+\begin{equation}
+  N_A x_p = N_D x_n
+\end{equation}
+となる。全空乏層幅$W$は
+\begin{equation}
+  W = x_p + x_n
+\end{equation}
+である。電界強度はポワソン方程式を積分して、
+\begin{equation}
+  E(x) =
+  \begin{cases}
+    -\frac{d^2 \Psi}{dx^2} = -\frac{qN_A(x+x_p)}{\epsilon_s} & -x_p \leq x \leq 0\\
+    -E_m + \frac{qN_D x}{\epsilon_s} & 0 \leq x \leq x_n
+  \end{cases}
+\end{equation}
+となる。ただし、$E_m$は$x=0$における最大電界強度であり、
+\begin{equation}
+  E_m = \frac{q N_D x_n}{\epsilon_s} = \frac{q N_A x_p}{\epsilon_s}
+\end{equation}
+となる。空乏層領域全体にわたって、積分すると、電位差、すなわち内臓電位$V_{bi}$が得られる。
+\begin{eqnarray}
+  V_{bi} &=& - \int_{-x_p}^{x_n} E(x) dx \nonumber \\
+  &=& \frac{qN_A x^2_p}{2 \epsilon_s} \nonumber \\
+  &=& \frac{q}{2\epsilon_s} (N_A x^2_p + N_D x^2_n)\\
+  &=& \frac{q}{2\epsilon_s} N_A x_p (x_p + x_n) \nonumber \\
+  &=& \frac{qN_D x^2_n}{2 \epsilon_x} = \frac{1}{2} E_m W
+\end{eqnarray}
+空乏層幅Wが内臓電位の関数として以下のように求められる。
+\begin{eqnarray}
+  V_{bi} &=& \frac{q}{2\epsilon_s} (N_A x^2_p + N_D x^2_n) \nonumber \\
+  &=& \frac{q}{2\epsilon_s} \left\{ N_A x^2_p + N_D \left( \frac{N_A x_p}{N_D} \right)^2 \right\} \nonumber \\
+  &=& \frac{q}{2\epsilon_s} N_A x^2_p \left( 1+ \frac{N_A}{N_D} \right) \nonumber \\
+  &=& \frac{q}{2 \epsilon_s} N_A x^2_p \frac{N_A + N_D}{N_D}  \\
+  x_p &=& \sqrt{\frac{2\epsilon_s}{qN_A} \frac{N_D}{N_A + N_D} V_{bi}} \\
+  x_n &=& \sqrt{\frac{2\epsilon_s}{qN_D} \frac{N_A}{N_A + N_D} V_{bi}}\\
+  W &=& x_p + x_n = \sqrt{\frac{2\epsilon_s V_{bi}}{qN_AN_D(N_A + N_D)}} (N_D + N_A)\nonumber \\
+    &=& \sqrt{\frac{2\epsilon_s}{q} \frac{N_A + N_D}{N_A N_D} V_{bi}}
+\end{eqnarray}
+階段接合において、一方の不純物濃度が他方に比べてずっと大きい場合は片側階段接合と呼ばれる。すなわち、$N_A \gg N_D$ の場合の空間電荷分布を示す。
+\begin{eqnarray}
+  x_n &=& \sqrt{\frac{2\epsilon_s}{qN_D} \frac{N_A}{N_A + N_D} V_{bi}}\\
+  &=& \sqrt{\frac{2\epsilon}{qN_D} V_{bi}}
+\end{eqnarray}
+なので、
+\begin{equation}
+  W \simeq x_n = \sqrt{\frac{2 \epsilon_s V_{bi}}{qN_D}}
+\end{equation}
+\end{document}
+  
+  
