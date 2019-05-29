@@ -1,9 +1,9 @@
-This is e-upTeX, Version 3.14159265-p3.8.0-u1.23-180226-2.6 (utf8.uptex) (TeX Live 2018) (preloaded format=uplatex 2018.7.2)  22 MAY 2019 18:15
+This is e-upTeX, Version 3.14159265-p3.8.0-u1.23-180226-2.6 (utf8.uptex) (TeX Live 2018) (preloaded format=uplatex 2018.7.2)  28 MAR 2019 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**repo_quantum_181031.tex
-(./repo_quantum_181031.tex
+**repo.tex
+(./repo.tex
 pLaTeX2e <2018-04-01u02>+1 (based on LaTeX2e <2018-04-01> patch level 2)
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/uplatex/base/ujarticle.cls
@@ -336,8 +336,8 @@ Package color Info: Driver file: dvipdfmx.def on input line 147.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(./repo_quantum_181031.aux)
-\openout1 = `repo_quantum_181031.aux'.
+(./repo.aux)
+\openout1 = `repo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
@@ -407,84 +407,85 @@ LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
 LaTeX Info: Redefining \nameref on input line 17.
 
-(./repo_quantum_181031.out) (./repo_quantum_181031.out)
+(./repo.out) (./repo.out)
 \@outlinefile=\write3
-\openout3 = `repo_quantum_181031.out'.
+\openout3 = `repo.out'.
 
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 19.
+(Font)              scaled to size 16.62714pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 19.
+(Font)              scaled to size 16.62714pt on input line 20.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 19.
+(Font)              scaled to size 11.54663pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 19.
+(Font)              scaled to size 11.54663pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 19.
+(Font)              scaled to size 7.69775pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 19.
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+(Font)              scaled to size 5.77332pt on input line 20.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 19.
+(Font)              scaled to size 11.54663pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 19.
+(Font)              scaled to size 7.69775pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 19.
+(Font)              scaled to size 5.77332pt on input line 20.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 19.
+(Font)              scaled to size 13.85594pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 19.
+(Font)              scaled to size 13.85594pt on input line 20.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 19.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 19.
+(Font)              scaled to size 13.85594pt on input line 20.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 19.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 19.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 20.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 20.
+(Font)              scaled to size 13.85594pt on input line 20.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 21.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 20.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 20.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 20.
-
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 43.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
-[1
+(Font)              scaled to size 11.54663pt on input line 21.
+File: ./screenshot1.png Graphic file (type bmp)
+<./screenshot1.png>
+File: ./screenshot2.png Graphic file (type bmp)
+<./screenshot2.png>
+ [1
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
- (./repo_quantum_181031.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
-Package rerunfilecheck Info: File `repo_quantum_181031.out' has not changed.
-(rerunfilecheck)             Checksum: 813F31ECCC765F9F947824F8A57CD600;79.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
+File: ./screenshot3.png Graphic file (type bmp)
+<./screenshot3.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+
+(./repo.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 54.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package rerunfilecheck Info: File `repo.out' has not changed.
+(rerunfilecheck)             Checksum: 1CE5EF48A20CC90B75F553F2B4292ECC;260.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 7602 strings out of 493270
- 108510 string characters out of 6145019
- 218726 words of memory out of 5000000
- 11453 multiletter control sequences out of 15000+600000
- 20724 words of font info for 90 fonts, out of 8000000 for 9000
+ 7592 strings out of 493270
+ 108313 string characters out of 6145019
+ 215729 words of memory out of 5000000
+ 11446 multiletter control sequences out of 15000+600000
+ 16268 words of font info for 73 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,13n,32p,230b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,6n,32p,1353b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on repo_quantum_181031.dvi (1 page, 4680 bytes).
+Output written on repo.dvi (2 pages, 9156 bytes).
